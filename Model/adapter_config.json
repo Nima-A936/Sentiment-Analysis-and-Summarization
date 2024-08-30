@@ -1,0 +1,8 @@
+{
+    "r": 4,
+    "lora_alpha": 32,
+    "lora_dropout": 0.01,
+    "task_type": "SEQ_CLS",
+    "target_modules": ["q_lin"],
+    "peft_type": "LORA"
+}
