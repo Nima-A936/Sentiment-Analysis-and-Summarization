@@ -1,0 +1,4 @@
+transformers
+peft
+torch
+langchain_openai
