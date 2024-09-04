@@ -7,7 +7,7 @@ import base64
 from PIL import Image
 import os
 import pandas as pd
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Set up the sentiment analysis model and tokenizer
 base_model_checkpoint = "distilbert-base-uncased"
@@ -20,7 +20,7 @@ model = PeftModel.from_pretrained(base_model, "Model")
 # Move the model to the GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
-load_dotenv()
+#load_dotenv()
 api_key = os.getenv('API_KEY')
 
 # Initialize the ChatOpenAI instance for summarization using GPT-3.5
