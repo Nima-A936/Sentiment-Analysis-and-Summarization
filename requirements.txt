@@ -2,4 +2,4 @@ transformers
 peft
 torch
 langchain_openai
-dotenv
+python-dotenv
