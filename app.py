@@ -112,9 +112,9 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.markdown('<div class="image-container"><img src="data:image/png;base64,' + get_img_as_base64("Pictures/customer.png") + '" alt="Customer Image" class="customer-image" width="130"></div></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="image-container1"><img src="data:image/png;base64,' + get_img_as_base64("Pictures/like_thumb.png") + '" alt="Like_thumb Image" class="like-image" width="90"></div></div>', unsafe_allow_html=True)
+st.markdown('<div class="image-container1"><img src="data:image/png;base64,' + get_img_as_base64("Pictures/like_thumb.png") + '" alt="Like_thumb Image" class="like-image" width="80"></div></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="image-container2"><img src="data:image/png;base64,' + get_img_as_base64("Pictures/dislike_thumb.png") + '" alt="Dislike_thumb Image" class="Dislike-image" width="90"></div></div>', unsafe_allow_html=True)
+st.markdown('<div class="image-container2"><img src="data:image/png;base64,' + get_img_as_base64("Pictures/dislike_thumb.png") + '" alt="Dislike_thumb Image" class="Dislike-image" width="80"></div></div>', unsafe_allow_html=True)
 
 
 # Title Section with the new text added
