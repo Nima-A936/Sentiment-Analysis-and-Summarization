@@ -88,7 +88,7 @@ right: 2rem;
 .image-container1 {{
     position: absolute;
     top: -92px;
-    left: 10%;
+    left: -6%;
     transform: translateX(50%);
     z-index: 1;
 }}
@@ -96,7 +96,7 @@ right: 2rem;
 .image-container2 {{
     position: absolute;
     top: -108px;
-    right: 12%;
+    right: -6%;
     transform: translateX(-50%);
     z-index: 1;
 }}
