@@ -251,7 +251,7 @@ if st.button("Analyze and Summarize"):
             summary_context = "Product Quality Summary:"
             summary_label = "Product Quality Summary:"
         elif context == "Delivery Experience":
-            prompt_context = "Only summarize the delivery and packaging issues."
+            prompt_context = "Only summarize the delivery and packaging issues nothing more."
             summary_context = "Delivery Experience Summary:"
             summary_label = "Delivery Experience Summary:"
 
