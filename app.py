@@ -252,7 +252,7 @@ if st.button("Analyze and Summarize"):
             summary_label = "Product Quality Summary:"
         elif context == "Delivery Experience":
             prompt_context = "Only summarize the delivery and packaging issues nothing more."
-            summary_context = "Delivery Experience Summary:"
+            summary_context = "late arrival,damaged packing:"
             summary_label = "Delivery Experience Summary:"
 
         # Combine the context with the negative comments
