@@ -29,7 +29,7 @@ api_key = os.getenv('API_KEY')
 llm = ChatOpenAI(
     model="gpt-3.5-turbo",
     base_url="https://api.avalai.ir/v1",
-    api_key=api_key
+    api_key="aa-gAp2CUy0mkUSBkHkJ8HpVNnVW099QOZgkKG99LN8gpxc5fwT"
 )
 
 # Function to encode image as base64
