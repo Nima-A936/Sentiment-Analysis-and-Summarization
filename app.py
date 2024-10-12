@@ -110,13 +110,17 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 # CSS to apply the background image
 page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] > .main {{
+#[data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/jpg;base64,{img}");
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }}
+body {{
+    background-image: url("data:image/jpg;base64,{img}");
+    background-size: cover;
+    }}
 
 [data-testid="stSidebar"] > div:first-child {{
 background-image: url("data:image/jpg;base64,{img}");
