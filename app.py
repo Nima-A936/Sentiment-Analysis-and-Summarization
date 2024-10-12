@@ -108,17 +108,6 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 # CSS to apply the background image
 page_bg_img = f"""
 <style>
