@@ -134,7 +134,7 @@ def set_jpg_as_page_bg(jpg_file):
     return
 
 # Set background using the 'desktop.jpg' file
-set_jpg_as_page_bg('desktop.jpg')
+set_jpg_as_page_bg('Pictures/desktop.jpg')
 
 ##
 
