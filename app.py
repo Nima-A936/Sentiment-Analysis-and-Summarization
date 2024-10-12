@@ -33,7 +33,7 @@ llm = ChatOpenAI(
 )
 
 # Function to encode image as base64
-@st.experimental_memo
+@st.cache_data
 def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
@@ -105,7 +105,6 @@ def calculate_average_rating(stars):
 img = get_img_as_base64("Pictures/desktop.jpg")
 img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
-
 
 
 # CSS to apply the background image
