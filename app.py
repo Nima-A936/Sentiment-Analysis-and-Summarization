@@ -107,36 +107,6 @@ img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
-##
-import base64
-import streamlit as st
-
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_jpg_as_page_bg(jpg_file):
-    bin_str = get_base64_of_bin_file(jpg_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/jpg;base64,%s");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-# Set background using the 'desktop.jpg' file
-set_jpg_as_page_bg('Pictures/desktop.jpg')
-
-##
 
 
 
@@ -447,40 +417,40 @@ if uploaded_stars is None:
 
         
 # README Section in the Sidebar with custom font and increased text size
-st.sidebar.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-""", unsafe_allow_html=True)
+#st.sidebar.markdown("""
+#<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+#""", unsafe_allow_html=True)
 
-st.sidebar.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-""", unsafe_allow_html=True)
+#st.sidebar.markdown("""
+#<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+#""", unsafe_allow_html=True)
 
 # README Section in the Sidebar with custom font, increased text size, and added depth
-st.sidebar.markdown('<div style="font-family: \'Lato\', sans-serif; font-size: 22px; color: #e74c3c ; font-weight: bold; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);">📖 README</div>', unsafe_allow_html=True)
-st.sidebar.markdown(f"""
-<div style="font-family: 'Lato', sans-serif; font-size: 18px; color: #f4d03f; line-height: 1.6; text-shadow: 3px 3px 3px rgba(241, 196, 15, 0.4); font-weight: 550;">
-<strong>Customer Reviews Summarization</strong> is a web application that allows managers to analyze and summarize customer feedback. The app focuses on providing context-based summaries, allowing managers to concentrate on specific aspects like product quality or delivery experience.
+#st.sidebar.markdown('<div style="font-family: \'Lato\', sans-serif; font-size: 22px; color: #e74c3c ; font-weight: bold; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);">📖 README</div>', unsafe_allow_html=True)
+#st.sidebar.markdown(f"""
+#<div style="font-family: 'Lato', sans-serif; font-size: 18px; color: #f4d03f; line-height: 1.6; text-shadow: 3px 3px 3px rgba(241, 196, 15, 0.4); font-weight: 550;">
+#<strong>Customer Reviews Summarization</strong> is a web application that allows managers to analyze and summarize customer feedback. The app focuses on providing context-based summaries, allowing managers to concentrate on specific aspects like product quality or delivery experience.
 
-<h3>Features:</h3>
-<ul>
-<li>Context-based summarization.</li>
-<li>Sentiment analysis of customer feedback.</li>
-<li>CSV File Upload Option.</li>
-<li>Customizable interface with background images.</li>
-</ul>
+#<h3>Features:</h3>
+#<ul>
+#<li>Context-based summarization.</li>
+#<li>Sentiment analysis of customer feedback.</li>
+#<li>CSV File Upload Option.</li>
+#<li>Customizable interface with background images.</li>
+#</ul>
 
-<h3>Contributing:</h3>
-Feel free to submit pull requests or open issues to contribute to the project. Please make sure to follow the contribution guidelines.
+#<h3>Contributing:</h3>
+#Feel free to submit pull requests or open issues to contribute to the project. Please make sure to follow the contribution guidelines.
 
-<h3>Applications:</h3>
-This app is ideal for e-commerce businesses to identify common product quality issues, delivery challenges, and overall customer sentiment. 
-With this tool, businesses can gain insights into areas that need improvement, enabling them to enhance their services, 
-optimize product offerings, and boost customer satisfaction by focusing on what matters most to their consumers.
-<br><img src="data:image/png;base64,{img2}" alt="Applications Image" style="width:300px;height:300px;">
+#<h3>Applications:</h3>
+#This app is ideal for e-commerce businesses to identify common product quality issues, delivery challenges, and overall customer sentiment. 
+#With this tool, businesses can gain insights into areas that need improvement, enabling them to enhance their services, 
+#optimize product offerings, and boost customer satisfaction by focusing on what matters most to their consumers.
+#<br><img src="data:image/png;base64,{img2}" alt="Applications Image" style="width:300px;height:300px;">
 
-<h3>Social Media:</h3>
-This app is highly suitable for <strong> social network applications</strong> where businesses can leverage <strong>Customer Reviews Summarization</strong> to analyze and understand customer feedback at scale.
-For <strong>social network applications</strong>, where many online shopping businesses are active, this tool allows companies to assess feedback from platforms like Instagram, Facebook, and other social media channels.
-<br><img src='data:image/png;base64,{img1}' alt='E-commerce Image' style='width:300px;height:300px;'>
-</div>
-""", unsafe_allow_html=True)
+#<h3>Social Media:</h3>
+#This app is highly suitable for <strong> social network applications</strong> where businesses can leverage <strong>Customer Reviews Summarization</strong> to analyze and understand customer feedback at scale.
+#For <strong>social network applications</strong>, where many online shopping businesses are active, this tool allows companies to assess feedback from platforms like Instagram, Facebook, and other social media channels.
+#<br><img src='data:image/png;base64,{img1}' alt='E-commerce Image' style='width:300px;height:300px;'>
+#</div>
+#""", unsafe_allow_html=True)
