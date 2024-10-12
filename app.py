@@ -110,12 +110,12 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 # CSS to apply the background image
 page_bg_img = f"""
 <style>
-#[data-testid="stAppViewContainer"] > div:first-child {{
-background-image: url("data:image/jpg;base64,{img1}");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-}}
+[data-testid="stAppViewContainer"] > .main {
+    background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+    background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+    background-position: center;  
+    background-repeat: no-repeat;
+}
 
 [data-testid="stSidebar"] > div:first-child {{
 background-image: url("data:image/jpg;base64,{img}");
@@ -182,6 +182,8 @@ css = '''
 }
 </style>
 '''
+
+
 
 # Inject the custom CSS into the Streamlit app
 st.markdown(css, unsafe_allow_html=True)
