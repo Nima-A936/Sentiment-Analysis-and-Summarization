@@ -123,7 +123,7 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("data:image/jpg;base64,{img}");
+background-image: url("https://github.com/Nima-A936/Sentiment-Analysis-and-Summarization/blob/main/Pictures/desktop.jpg");
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
