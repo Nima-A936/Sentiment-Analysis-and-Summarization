@@ -108,29 +108,6 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 
-import streamlit as st
-
-def add_bg_from_local():
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("./static/desktop.jpg");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-add_bg_from_local()
-
-
-
-
-
-
-
 
 
 
@@ -150,7 +127,7 @@ background-image: url("data:image/jpg;base64,{img}");
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
-background-attachment: fixed;
+background-attachment: local;
 }}
 
 [data-testid="stSidebar"] > div:first-child {{
