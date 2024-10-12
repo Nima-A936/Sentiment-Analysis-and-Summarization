@@ -131,7 +131,7 @@ background-attachment: fixed;
 }}
 
 [data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/jpg;base64,{img}");
+background-image: url(""https://github.com/Nima-A936/Sentiment-Analysis-and-Summarization/blob/main/Pictures/desktop.jpg"");
 background-position: center; 
 background-repeat: no-repeat;
 background-attachment: fixed;
