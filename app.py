@@ -102,7 +102,7 @@ def calculate_average_rating(stars):
 
 
 # Encode your Images
-img = get_img_as_base64("image.jpg")
+img = get_img_as_base64("Pictures/desktop.jpg")
 img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
@@ -123,15 +123,15 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
-background-size: 180%;
+background-image: url("data:image/jpg;base64,{img}");
+background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
-background-attachment: local;
+background-attachment: fixed;
 }}
 
 [data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/png;base64,{img}");
+background-image: url("data:image/jpg;base64,{img}");
 background-position: center; 
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -144,6 +144,34 @@ background: rgba(0,0,0,0);
 [data-testid="stToolbar"] {{
 right: 2rem;
 }}
+.image-container {{
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}}
+
+.image-container1 {{
+    position: absolute;
+    top: -45px;
+    left: -6%;
+    transform: translateX(50%);
+    z-index: 1;
+}}
+
+.image-container2 {{
+    position: absolute;
+    top: -61px;
+    right: -6%;
+    transform: translateX(-50%);
+    z-index: 1;
+}}
+
+img.customer-image {{
+    background: transparent;
+}}
+
 </style>
 """
 #Padding the upload file section
