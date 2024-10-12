@@ -142,7 +142,7 @@ def set_jpg_as_page_bg(jpg_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Set the background using the 'desktop.jpg' file
-set_jpg_as_page_bg('desktop.jpg')
+set_jpg_as_page_bg('Pictures/desktop.jpg')
 
 # Rest of your Streamlit code
 st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px; border-radius: 10px; text-align: center; color: #f1c40f;"><h1>Customer Reviews Summarization</h1></div>', unsafe_allow_html=True)
