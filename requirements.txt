@@ -4,3 +4,4 @@ torch
 langchain_openai
 python-dotenv
 matplotlib
+PIL
