@@ -111,9 +111,8 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 page_bg_img = f"""
 <style>
 #[data-testid="stAppViewContainer"] > div:first-child {{
-background-image: url("data:image/jpg;base64,{img}");
+background-image: url("data:image/jpg;base64,{img1}");
 background-size: cover;
-background-position: top left;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }}
