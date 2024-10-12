@@ -102,7 +102,7 @@ def calculate_average_rating(stars):
 
 
 # Encode your Images
-img = get_img_as_base64("desktop.jpg")
+img = get_img_as_base64("Pictures/desktop.jpg")
 img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
@@ -120,20 +120,60 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 # CSS to apply the background image
-# Example with an external URL for background
-page_bg_img = '''
+page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] > .main {
-background-image: url("https://your-image-url-here.jpg");
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("data:image/jpg;base64,{img}");
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
 background-attachment: fixed;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+}}
 
+[data-testid="stSidebar"] > div:first-child {{
+background-image: url("data:image/jpg;base64,{img}");
+background-position: center; 
+background-repeat: no-repeat;
+background-attachment: fixed;
+}}
+
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+
+[data-testid="stToolbar"] {{
+right: 2rem;
+}}
+.image-container {{
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}}
+
+.image-container1 {{
+    position: absolute;
+    top: -45px;
+    left: -6%;
+    transform: translateX(50%);
+    z-index: 1;
+}}
+
+.image-container2 {{
+    position: absolute;
+    top: -61px;
+    right: -6%;
+    transform: translateX(-50%);
+    z-index: 1;
+}}
+
+img.customer-image {{
+    background: transparent;
+}}
+
+</style>
+"""
 #Padding the upload file section
 css = '''
 <style>
