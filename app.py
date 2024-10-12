@@ -184,8 +184,6 @@ css = '''
 </style>
 '''
 
-
-
 # Inject the custom CSS into the Streamlit app
 st.markdown(css, unsafe_allow_html=True)
 
