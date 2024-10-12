@@ -120,6 +120,20 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 # CSS to apply the background image
+import base64
+import streamlit as st
+
+# Function to encode the image as base64
+@st.cache_data
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Encode the image
+img = get_img_as_base64("Pictures/desktop.jpg")
+
+# CSS to apply the background image
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
@@ -174,7 +188,11 @@ img.customer-image {{
 
 </style>
 """
-#Padding the upload file section
+
+# Inject the custom CSS into the Streamlit app
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Optional CSS for file uploader customization
 css = '''
 <style>
 /* Target the file uploader text to replace "Drag and drop file here" */
@@ -190,11 +208,18 @@ css = '''
     background-color: #111; /* Change background if needed */
     padding: 30px;
     border-radius: 10px;
-    font-size: 20px
-    color: white
+    font-size: 20px;
+    color: white;
 }
 </style>
 '''
+
+# Inject the custom CSS for the file uploader
+st.markdown(css, unsafe_allow_html=True)
+
+# Rest of your Streamlit code goes here...
+st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px; border-radius: 10px; text-align: center; color: #f1c40f;"><h1>Customer Reviews Summarization</h1></div>', unsafe_allow_html=True)
+
 
 
 
