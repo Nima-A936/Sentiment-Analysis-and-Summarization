@@ -102,7 +102,7 @@ def calculate_average_rating(stars):
 
 
 # Encode your Images
-img = get_img_as_base64("Pictures/desktop.jpg")
+img = get_img_as_base64("Pictures/customer.png")
 img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
