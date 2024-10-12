@@ -107,47 +107,9 @@ img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
-#
-import base64
-import streamlit as st
 
-# Cache the base64 conversion to avoid re-running for the same image
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
-# Function to set a jpg as background
-def set_jpg_as_page_bg(jpg_file):
-    bin_str = get_base64_of_bin_file(jpg_file)
-    page_bg_img = f'''
-    <style>
-    [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("data:image/jpg;base64,{bin_str}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    }}
 
-    [data-testid="stSidebar"] > div:first-child {{
-    background-image: url("data:image/jpg;base64,{bin_str}");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    }}
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Set the background using the 'desktop.jpg' file
-set_jpg_as_page_bg('Pictures/desktop.jpg')
-
-# Rest of your Streamlit code
-st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px; border-radius: 10px; text-align: center; color: #f1c40f;"><h1>Customer Reviews Summarization</h1></div>', unsafe_allow_html=True)
-
-#
 
 
 
@@ -233,6 +195,8 @@ css = '''
 }
 </style>
 '''
+
+st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px; border-radius: 10px; text-align: center; color: #f1c40f;"><h1>Customer Reviews Summarization</h1></div>', unsafe_allow_html=True)
 
 # Inject the custom CSS into the Streamlit app
 st.markdown(css, unsafe_allow_html=True)
