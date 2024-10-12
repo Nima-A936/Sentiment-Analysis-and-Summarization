@@ -107,6 +107,44 @@ img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
+#
+import base64
+import streamlit as st
+
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_jpg_as_page_bg(jpg_file):
+    bin_str = get_base64_of_bin_file(jpg_file)
+    page_bg_img = f'''
+    <style>
+    [data-testid="stAppViewContainer"] > .main {{
+    background-image: url("data:image/jpg;base64,{bin_str}");
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }}
+    
+    [data-testid="stSidebar"] > div:first-child {{
+    background-image: url("data:image/jpg;base64,{bin_str}");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }}
+    </style>
+    '''
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Set background using the 'desktop.jpg' file
+set_jpg_as_page_bg('Pictures/desktop.jpg')
+#
+
+
 
 
 
