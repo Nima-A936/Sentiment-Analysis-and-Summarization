@@ -108,6 +108,29 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 
+import streamlit as st
+
+def add_bg_from_local():
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("./static/desktop.jpg");
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+add_bg_from_local()
+
+
+
+
+
+
+
 
 
 
