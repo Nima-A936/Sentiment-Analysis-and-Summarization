@@ -105,57 +105,6 @@ def calculate_average_rating(stars):
 img = get_img_as_base64("desktop.jpg")
 img1 = get_img_as_base64("Pictures/Applications.png")
 img2 = get_img_as_base64("Pictures/E-Commerce.png")
-##
-import base64
-import streamlit as st
-from PIL import Image
-from io import BytesIO
-
-# Function to encode the image as base64
-@st.cache_data
-def get_img_as_base64(image_file):
-    img = Image.open(image_file)
-    buffer = BytesIO()
-    img.save(buffer, format="JPEG")
-    return base64.b64encode(buffer.getvalue()).decode()
-
-# Upload image file
-uploaded_file = st.file_uploader("Choose a background image", type=["jpg", "jpeg", "png"])
-
-if uploaded_file is not None:
-    # Convert the uploaded image to base64
-    img_base64 = get_img_as_base64(uploaded_file)
-
-    # CSS to apply the background image
-    page_bg_img = f"""
-    <style>
-    [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("data:image/jpg;base64,{img_base64}");
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    }}
-
-    [data-testid="stSidebar"] > div:first-child {{
-    background-image: url("data:image/jpg;base64,{img_base64}");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    }}
-    </style>
-    """
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-else:
-    st.warning("Please upload a background image to display.")
-
-# Rest of your Streamlit code...
-st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px; border-radius: 10px; text-align: center; color: #f1c40f;"><h1>Customer Reviews Summarization</h1></div>', unsafe_allow_html=True)
-##
-
-
-
 
 
 
@@ -171,60 +120,20 @@ st.markdown('<div style="background-color: rgba(49, 48, 49, 0.8); padding: 21px;
 
 
 # CSS to apply the background image
-page_bg_img = f"""
+# Example with an external URL for background
+page_bg_img = '''
 <style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("data:image/jpg;base64,{img}");
+[data-testid="stAppViewContainer"] > .main {
+background-image: url("https://your-image-url-here.jpg");
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
 background-attachment: fixed;
-}}
-
-[data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/jpg;base64,{img}");
-background-position: center; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-}}
-
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-
-[data-testid="stToolbar"] {{
-right: 2rem;
-}}
-.image-container {{
-    position: absolute;
-    top: -90px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}}
-
-.image-container1 {{
-    position: absolute;
-    top: -45px;
-    left: -6%;
-    transform: translateX(50%);
-    z-index: 1;
-}}
-
-.image-container2 {{
-    position: absolute;
-    top: -61px;
-    right: -6%;
-    transform: translateX(-50%);
-    z-index: 1;
-}}
-
-img.customer-image {{
-    background: transparent;
-}}
-
+}
 </style>
-"""
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 #Padding the upload file section
 css = '''
 <style>
