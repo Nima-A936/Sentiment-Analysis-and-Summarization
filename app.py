@@ -108,6 +108,9 @@ img2 = get_img_as_base64("Pictures/E-Commerce.png")
 
 
 ##
+import base64
+import streamlit as st
+
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -129,7 +132,10 @@ def set_jpg_as_page_bg(jpg_file):
     
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
+
+# Set background using the 'desktop.jpg' file
 set_jpg_as_page_bg('desktop.jpg')
+
 ##
 
 
