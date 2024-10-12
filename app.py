@@ -131,7 +131,7 @@ background-attachment: local;
 }}
 
 [data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/jpg;base64,{img}");
+background-image: url("data:image/png;base64,{img}");
 background-position: center; 
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -144,34 +144,6 @@ background: rgba(0,0,0,0);
 [data-testid="stToolbar"] {{
 right: 2rem;
 }}
-.image-container {{
-    position: absolute;
-    top: -90px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}}
-
-.image-container1 {{
-    position: absolute;
-    top: -45px;
-    left: -6%;
-    transform: translateX(50%);
-    z-index: 1;
-}}
-
-.image-container2 {{
-    position: absolute;
-    top: -61px;
-    right: -6%;
-    transform: translateX(-50%);
-    z-index: 1;
-}}
-
-img.customer-image {{
-    background: transparent;
-}}
-
 </style>
 """
 #Padding the upload file section
